@@ -36,6 +36,11 @@ public class grafo {
         for(int i = 0; i < quantidade; i++){
             No atual = nos[i];
             System.out.print("["+atual+"]");
+
+            for (int j = 0; j < atual.quantidadeVizinho; j++){
+                System.out.print("--->["+atual.vizinho[j]+"]");
+            }
         }
+        System.out.println();
     }
 }
