@@ -12,4 +12,15 @@ public class No {
         vizinho = new No[10];
         quantidadeVizinho = 0;
     }
+
+    public void adcionarVizinho(No no) {
+        if (quantidadeVizinho <= 10) {
+            vizinho[quantidadeVizinho] = no;
+            quantidadeVizinho++;
+        }
+    }
+
+    public String toString() {
+        return nome;
+    }
 }
