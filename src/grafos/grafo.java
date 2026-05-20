@@ -35,6 +35,7 @@ public class grafo {
 
         for(int i = 0; i < quantidade; i++){
             No atual = nos[i];
+            System.out.print("["+atual+"]");
         }
     }
 }
