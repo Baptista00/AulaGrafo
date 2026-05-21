@@ -43,4 +43,31 @@ public class grafo {
         }
         System.out.println();
     }
-}
+    public void bsucarProfundidade(No inicio){
+        No[] visitados = new No[20];
+
+        int quantidadeVisitado = 0;
+        System.out.println("--Busca em Profundidade--");
+        buscaProfundidadeRec(inicio,visitados,quantidadeVisitado);
+
+    }
+    private void buscaProfundidadeRec(No atual, No[] visitados, int quantidadeVisitado){
+        visitados[quantidadeVisitado] = atual;
+        quantidadeVisitado++;
+        System.out.print(atual + "-->");
+
+        for(int i = 0; i < atual.quantidadeVizinho; i++){
+            No vizinho = atual.vizinho[i];
+            boolean visitado = false;
+            for (int j = 0; j < quantidadeVisitado; j++) {
+                if (visitados[j] == vizinho){
+                    visitado = true;
+                    }
+                }
+            if (!visitado){
+                buscaProfundidadeRec(vizinho,visitados,quantidadeVisitado);
+            }
+            }
+        }
+    }
+
